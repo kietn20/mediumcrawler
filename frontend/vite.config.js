@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://mediumcrawler-backend.vercel.app',
+        target: 'https://mediumcrawler-backend.onrender.com',
         changeOrigin: true,
         secure: true,
       },

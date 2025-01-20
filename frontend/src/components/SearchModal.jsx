@@ -51,7 +51,7 @@ export const SearchModal = () => {
     if (searchQuery.trim() === "") return;
 
     try {
-      const response = await axios.get("https://mediumcrawler-backend.vercel.app/api/search", {
+      const response = await axios.get("https://mediumcrawler-backend.onrender.com/api/search", {
         params: { query: searchQuery, type: selectedSuggestion },
       });
       console.log('Search Results:', response.data);
@@ -67,7 +67,7 @@ export const SearchModal = () => {
       if (searchQuery.trim() === "") return;
 
       try {
-        const response = await axios.get("https://mediumcrawler-backend.vercel.app/api/search", {
+        const response = await axios.get("https://mediumcrawler-backend.onrender.com/api/search", {
           params: { query: searchQuery, type: selectedSuggestion },
         });
         console.log('Search Results:', response.data);
@@ -104,7 +104,7 @@ export const SearchModal = () => {
   const handleMediaSelect = (media) => {
     setMediaItem(slotIndexClicked, {
       title: media.title,
-      imageUrl: `https://mediumcrawler-backend.vercel.app/proxy?url=${encodeURIComponent(media.imageUrl)}`,
+      imageUrl: `https://mediumcrawler-backend.onrender.com/proxy?url=${encodeURIComponent(media.imageUrl)}`,
       releaseDate: media.releaseDate,
     });
     setShowSearchModal(false);

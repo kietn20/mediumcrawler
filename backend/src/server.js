@@ -17,8 +17,6 @@ app.use(cors({
 app.use(express.json());
 
 // Routes
-app.use('/', express.static('public'));
-
 app.use('/api', apiRoutes);
 
 // Proxy server route

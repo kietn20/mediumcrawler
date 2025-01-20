@@ -12,7 +12,7 @@ import {
 import { useMediaStore } from "../store/mediaStore";
 import { useEditModalStore } from "../store/editStore";
 import axios from "axios";
-import { Tooltip } from "./UI/Tooltip";
+import { Tooltip } from "./ui/Tooltip";
 
 export const SearchModal = () => {
   // Search Modal State Store

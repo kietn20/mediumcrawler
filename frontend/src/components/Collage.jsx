@@ -16,7 +16,7 @@ import { HelpModal } from "./HelpModal";
 import { SearchModal } from "./SearchModal";
 import { EditModal } from "./EditModal";
 import { Toaster } from "react-hot-toast";
-import { Dock, DockIcon, DockItem, DockLabel } from "./UI/Dock";
+import { Dock, DockIcon, DockItem, DockLabel } from "./ui/Dock";
 import { ShareModal } from "./ShareModal";
 import { useShareModalStore } from "../store/shareModalStore";
 import { ManageListsModal } from "./ManageListsModal";

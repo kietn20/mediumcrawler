@@ -11,7 +11,9 @@ const PORT = process.env.PORT || 5000;
 const PROXY_PORT = 3001; // Port for the proxy server
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: 'https://mediumcrawler-16kl.vercel.app', // Allow requests from your frontend domain
+}));
 app.use(express.json());
 
 // Routes

@@ -186,7 +186,7 @@ export const Collage = () => {
           </div>
         ))}
       </div>
-      <div ref={dockRef} className="sticky bottom-2 left-1/2 max-w-full -translate-x-1/2 opacity-30 hover:opacity-100 duration-300 z-50">
+      <div ref={dockRef} className="sticky bottom-0 left-1/2 max-w-full -translate-x-1/2 opacity-30 hover:opacity-100 duration-300 z-50">
         <Dock className="items-end pb-1">
           {dockElements.map((item, idx) => (
             <DockItem

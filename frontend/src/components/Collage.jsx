@@ -1,7 +1,6 @@
 import {
   BadgePlus,
   CaseLower,
-  ChartNoAxesColumnDecreasing,
   CircleHelp,
   ListFilterPlus,
   ListOrdered,
@@ -35,10 +34,6 @@ export const Collage = () => {
   const setShowHelp = useHelpModalStore((state) => state.setShowHelp);
   const [showRanking, setShowRanking] = useState(false);
   const setPage = useHelpModalStore((state) => state.setPage);
-  const showShareModal = useShareModalStore((state) => state.showShareModal);
-  const setShowShareModal = useShareModalStore(
-    (state) => state.setShowShareModal
-  );
   const showManageListsModal = useMediaStore(
     (state) => state.showManageListsModal
   );

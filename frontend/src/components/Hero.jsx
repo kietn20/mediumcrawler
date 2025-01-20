@@ -40,7 +40,7 @@ export const Hero = () => {
 				<span className="font-heading text-9xl">medium crawler</span>
 			</motion.div>
 			<motion.img
-				src="src/assets/hero.svg"
+				src="/hero.svg"
 				alt="hero"
 				initial={{ y: 0, opacity: 1 }}
 				animate={controls}

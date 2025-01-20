@@ -9,7 +9,7 @@ export default defineConfig({
       '/api': {
         target: 'https://mediumcrawler.vercel.app',
         changeOrigin: true,
-        secure: false,
+        secure: true,
       },
     },
   },

@@ -51,7 +51,7 @@ export const SearchModal = () => {
     if (searchQuery.trim() === "") return;
 
     try {
-      const response = await axios.get("/api/search", {
+      const response = await axios.get("https://mediumcrawler.vercel.app/api/search", {
         params: { query: searchQuery, type: selectedSuggestion },
       });
       console.log('Search Results:', response.data);
@@ -67,7 +67,7 @@ export const SearchModal = () => {
       if (searchQuery.trim() === "") return;
 
       try {
-        const response = await axios.get("/api/search", {
+        const response = await axios.get("https://mediumcrawler.vercel.app/api/search", {
           params: { query: searchQuery, type: selectedSuggestion },
         });
         console.log('Search Results:', response.data);

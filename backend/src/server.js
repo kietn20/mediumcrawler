@@ -12,7 +12,7 @@ const PROXY_PORT = 3001; // Port for the proxy server
 
 // Middleware
 app.use(cors({
-  origin: 'https://mediumcrawler.vercel.app',
+  origin: 'https://mediumcrawler.vercel.app', // Allow requests from your frontend domain
 }));
 app.use(express.json());
 
@@ -37,17 +37,12 @@ app.get('/proxy', async (req, res) => {
 });
 
 // Error handling middleware
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).json({ error: 'Something went wrong!' });
+app.use((req, res, next) => {
+  console.log('CORS headers:', res.get('Access-Control-Allow-Origin'));
+  next();
 });
 
 // Start the main server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
-});
-
-// Start the proxy server
-app.listen(PROXY_PORT, () => {
-  console.log(`Proxy server is running on port ${PROXY_PORT}`);
 });

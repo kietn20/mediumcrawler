@@ -6,35 +6,35 @@ import { useAppStore } from "../store/appStore";
 
 const displayMedia = [
 	{
-		image: "src/assets/media0.png",
+		image: "/media0.png",
 		url: "https://letterboxd.com/film/dune-part-two/",
 	},
 	{
-		image: "src/assets/media16.png",
+		image: "/media16.png",
 		url: "https://store.steampowered.com/app/2161700/Persona_3_Reload/",
 	},
 	{
-		image: "src/assets/media2.png",
+		image: "/media2.png",
 		url: "https://letterboxd.com/film/look-back-2024/",
 	},
 	{
-		image: "src/assets/media15.png",
+		image: "/media15.png",
 		url: "https://letterboxd.com/film/perfect-blue/",
 	},
 	{
-		image: "src/assets/media14.png",
+		image: "/media14.png",
 		url: "https://letterboxd.com/film/shogun-2024/",
 	},
 	{
-		image: "src/assets/media12.png",
+		image: "/media12.png",
 		url: "https://letterboxd.com/film/longlegs/",
 	},
 	{
-		image: "src/assets/media17.png",
+		image: "/media17.png",
 		url: "https://store.steampowered.com/app/2358720/Black_Myth_Wukong/",
 	},
 	{
-		image: "src/assets/media18.png",
+		image: "/media18.png",
 		url: "https://letterboxd.com/film/shin-godzilla-orthochromatic/",
 	},
 ];
@@ -194,7 +194,7 @@ export default function ImageStack() {
 								transition={{ duration: 0.5 }}
 							>
 								<img
-									src="src/assets/arrow-down 1.png"
+									src="/arrow-down 1.png"
 									alt="arrowdown"
 									className="h-32 animate-bounce opacity-40"
 								/>

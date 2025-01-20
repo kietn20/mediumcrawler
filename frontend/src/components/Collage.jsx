@@ -73,16 +73,16 @@ export const Collage = () => {
       ),
       href: "#",
     },
-    {
-      title: "Toggle Sorting",
-      icon: (
-        <ListOrdered
-          onClick={() => setShowRanking(!showRanking)}
-          className="h-full w-full dark:text-neutral-3001 text-[#8ac847] opacity-30 hover:opacity-100 duration-300"
-        />
-      ),
-      href: "#",
-    },
+    // {
+    //   title: "Toggle Sorting",
+    //   icon: (
+    //     <ListOrdered
+    //       onClick={() => setShowRanking(!showRanking)}
+    //       className="h-full w-full dark:text-neutral-3001 text-[#8ac847] opacity-30 hover:opacity-100 duration-300"
+    //     />
+    //   ),
+    //   href: "#",
+    // },
     {
       title: "Show Titles",
       icon: (
@@ -128,15 +128,18 @@ export const Collage = () => {
   ];
 
   const dockRef = useRef(null);
+  const promo = useRef(null);
 
   const captureAndShare = async (action) => {
     const element = document.getElementById('collage-screenshot');
     if (element) {
       dockRef.current.style.opacity = 0;
+      promo.current.style.opacity = 100;
       // Add a slight delay to ensure all elements are rendered
       await new Promise(resolve => setTimeout(resolve, 500)).then(() => {
         setTimeout(() => {
           dockRef.current.style.opacity = 30;
+          promo.current.style.opacity = 0;
         }, 1000);
       });
       const canvas = await html2canvas(element, { useCORS: true, scale: 2 });
@@ -177,7 +180,7 @@ export const Collage = () => {
               {showRanking && (
                 <div className="absolute text-2xl text-[#444C48] -top-8 -left-8 w-[50px] h-[50px] bg-[#232f16] bg-opacity-100 font-heading text-center rounded-lg flex justify-center items-end z-10">
                   <span className="text-center mb-1">
-                    &nbsp;{index + 1}.
+                    &nbsp;{index + 1}
                   </span>
                 </div>
               )}
@@ -186,7 +189,8 @@ export const Collage = () => {
           </div>
         ))}
       </div>
-      <div ref={dockRef} className="sticky bottom-0 left-1/2 max-w-full -translate-x-1/2 opacity-30 hover:opacity-100 duration-300 z-50">
+      <span ref={promo} classname="text-sm font-heading text-white opacity-0">share your own media collage @ <span classname="text-[#B1FA63]">mediumcrawler.vercel.app</span></span>
+      <div ref={dockRef} className="sticky bottom-1 left-1/2 max-w-full -translate-x-1/2 opacity-30 hover:opacity-100 duration-300 z-50">
         <Dock className="items-end pb-1">
           {dockElements.map((item, idx) => (
             <DockItem

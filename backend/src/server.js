@@ -8,11 +8,12 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-const PROXY_PORT = 3001; // Port for the proxy server
 
 // Middleware
 app.use(cors({
-  origin: 'https://mediumcrawler.vercel.app', // Allow requests from your frontend domain
+  origin: 'https://mediumcrawler.vercel.app', // Frontend domain
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type'],
 }));
 app.use(express.json());
 

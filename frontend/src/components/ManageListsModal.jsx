@@ -31,11 +31,10 @@ export const ManageListsModal = () => {
         ></div>
       )}
       <div
-        className={`fixed top-40 w-[680px] h-auto bg-[#1E2528] flex flex-col justify-between items-center gap-5 rounded-[30px] z-50 transition-opacity duration-300 font-heading px-2 py-5 drop-shadow-2xl ${
-          showManageListsModal
-            ? "opacity-100 pointer-events-auto"
-            : "opacity-0 pointer-events-none"
-        } `}
+        className={`fixed top-40 w-[680px] h-auto bg-[#1E2528] flex flex-col justify-between items-center gap-5 rounded-[30px] z-50 transition-opacity duration-300 font-heading px-2 py-5 drop-shadow-2xl ${showManageListsModal
+          ? "opacity-100 pointer-events-auto"
+          : "opacity-0 pointer-events-none"
+          } `}
       >
         <div className="flex flex-col justify-center items-center">
           <span className="text-4xl text-white mb-5">my media lists</span>
@@ -53,7 +52,7 @@ export const ManageListsModal = () => {
                   }
                 }}
               >
-                <span className="text-3xl">{list.name}</span>
+                <span className="text-2xl overflow-hidden overflow-ellipsis whitespace-nowrap w-[400px]">{list.name}</span>
                 <button
                   className={`text-2xl text-white p-2 bg-red-600 bg-opacity-0 hover:bg-opacity-100 rounded-[20px] duration-300 group drop-shadow-2xl`}
                   onClick={(e) => {

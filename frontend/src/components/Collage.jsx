@@ -140,7 +140,7 @@ export const Collage = () => {
         setTimeout(() => {
           dockRef.current.style.opacity = 30;
           promo.current.style.opacity = 0;
-        }, 1000);
+        }, 500);
       });
       const canvas = await html2canvas(element, { useCORS: true, scale: 2 });
       const dataUrl = canvas.toDataURL('image/png');
@@ -189,7 +189,7 @@ export const Collage = () => {
           </div>
         ))}
       </div>
-      <span ref={promo} classname="text-sm font-heading text-white opacity-0">share your own media collage @ <span classname="text-[#B1FA63]">mediumcrawler.vercel.app</span></span>
+      <span ref={promo} className="absolute bottom-5 text-base mt-16 font-heading text-white opacity-0">share your own media collage at <span className="text-[#B1FA63]">mediumcrawler.vercel.app</span></span>
       <div ref={dockRef} className="sticky bottom-1 left-1/2 max-w-full -translate-x-1/2 opacity-30 hover:opacity-100 duration-300 z-50">
         <Dock className="items-end pb-1">
           {dockElements.map((item, idx) => (

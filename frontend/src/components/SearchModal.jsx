@@ -104,7 +104,7 @@ export const SearchModal = () => {
   const handleMediaSelect = (media) => {
     setMediaItem(slotIndexClicked, {
       title: media.title,
-      imageUrl: `http://localhost:3001/proxy?url=${encodeURIComponent(media.imageUrl)}`, // Use the proxy server
+      imageUrl: `https://mediumcrawler-git-main-kietn20s-projects.vercel.app/proxy?url=${encodeURIComponent(media.imageUrl)}`, // Use the proxy server
       releaseDate: media.releaseDate,
     });
     setShowSearchModal(false);
@@ -124,11 +124,10 @@ export const SearchModal = () => {
       )}
       <div
         ref={searchModalRef}
-        className={`fixed top-80 left-1/2 transform -translate-x-1/2 w-[800px] flex-col justify-center z-50 transition-opacity duration-300 shadow-md md:min-w-[450px] bg-white rounded-xl font-heading ${
-          showSearchModal
+        className={`fixed top-80 left-1/2 transform -translate-x-1/2 w-[800px] flex-col justify-center z-50 transition-opacity duration-300 shadow-md md:min-w-[450px] bg-white rounded-xl font-heading ${showSearchModal
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
-        } `}
+          } `}
       >
         <div className="relative rounded-xl flex justify-between items-center">
           <input
@@ -181,11 +180,10 @@ export const SearchModal = () => {
             </div>
             <div className="space-y-1">
               <div
-                className={`flex items-center p-2 rounded-md cursor-pointer transition-colors ${
-                  selectedSuggestion === "Movie | TV Show | Anime"
+                className={`flex items-center p-2 rounded-md cursor-pointer transition-colors ${selectedSuggestion === "Movie | TV Show | Anime"
                     ? "bg-[#B1FA63]"
                     : "hover:bg-[#B1FA63] hover:bg-opacity-50"
-                }`}
+                  }`}
                 onClick={() => handleSuggestionClick("Movie | TV Show | Anime")}
                 role="button"
                 tabIndex={0}
@@ -199,11 +197,10 @@ export const SearchModal = () => {
                 <span className="mb-1">Movie | TV Show | Anime</span>
               </div>
               <div
-                className={`flex items-center p-2 rounded-md cursor-pointer transition-colors ${
-                  selectedSuggestion === "Manga"
+                className={`flex items-center p-2 rounded-md cursor-pointer transition-colors ${selectedSuggestion === "Manga"
                     ? "bg-[#B1FA63]"
                     : "hover:bg-[#B1FA63] hover:bg-opacity-50"
-                }`}
+                  }`}
                 onClick={() => handleSuggestionClick("Manga")}
                 role="button"
                 tabIndex={0}
@@ -217,11 +214,10 @@ export const SearchModal = () => {
                 <span className="mb-1">Manga</span>
               </div>
               <div
-                className={`flex items-center p-2 rounded-md cursor-pointer transition-colors ${
-                  selectedSuggestion === "Video Game"
+                className={`flex items-center p-2 rounded-md cursor-pointer transition-colors ${selectedSuggestion === "Video Game"
                     ? "bg-[#B1FA63]"
                     : "hover:bg-[#B1FA63] hover:bg-opacity-50"
-                }`}
+                  }`}
                 onClick={() => handleSuggestionClick("Video Game")}
                 role="button"
                 tabIndex={0}
@@ -235,11 +231,10 @@ export const SearchModal = () => {
                 <span className="mb-1">Video Game</span>
               </div>
               <div
-                className={`flex items-center p-2 rounded-md cursor-pointer transition-colors ${
-                  selectedSuggestion === "Book"
+                className={`flex items-center p-2 rounded-md cursor-pointer transition-colors ${selectedSuggestion === "Book"
                     ? "bg-[#B1FA63]"
                     : "hover:bg-[#B1FA63] hover:bg-opacity-50"
-                }`}
+                  }`}
                 onClick={() => handleSuggestionClick("Book")}
                 role="button"
                 tabIndex={0}

@@ -104,7 +104,7 @@ export const SearchModal = () => {
   const handleMediaSelect = (media) => {
     setMediaItem(slotIndexClicked, {
       title: media.title,
-      imageUrl: `https://mediumcrawler-git-main-kietn20s-projects.vercel.app/proxy?url=${encodeURIComponent(media.imageUrl)}`, // Use the proxy server
+      imageUrl: `https://mediumcrawler.vercel.app/proxy?url=${encodeURIComponent(media.imageUrl)}`,
       releaseDate: media.releaseDate,
     });
     setShowSearchModal(false);

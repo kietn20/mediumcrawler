@@ -167,6 +167,9 @@ export const SearchModal = () => {
                 src={media.imageUrl}
                 alt={media.title}
                 className="w-12 h-16 mr-4"
+                onError={(e) => {
+                  e.target.src = '/imagebroken.png';
+                }}
               />
               <div>
                 <div className="font-bold">{media.title}</div>

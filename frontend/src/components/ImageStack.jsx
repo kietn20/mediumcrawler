@@ -26,8 +26,8 @@ const displayMedia = [
 		url: "https://letterboxd.com/film/shogun-2024/",
 	},
 	{
-		image: "/media12.png",
-		url: "https://letterboxd.com/film/longlegs/",
+		image: "https://m.media-amazon.com/images/M/MV5BZDI5YzJhODQtMzQyNy00YWNmLWIxMjUtNDBjNjA5YWRjMzExXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+		url: "https://www.imdb.com/title/tt11280740/",
 	},
 	{
 		image: "/media17.png",
@@ -137,9 +137,9 @@ export default function ImageStack() {
 												? 0
 												: -15
 											: (index -
-													(displayMedia.length - 1) /
-														2) *
-											  5,
+												(displayMedia.length - 1) /
+												2) *
+											5,
 										// x: `calc(${getSpreadPosition(index)}% - 32px)`, // Subtracting half the width of the image
 										x: `${getSpreadPosition(index)}%`,
 										y:

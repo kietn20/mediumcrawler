@@ -7,7 +7,7 @@ import { useState, useEffect, useRef } from "react";
 
 const ItemType = "SLOT";
 
-export const Slot = ({ index }) => {
+export const Slot = ({ index, showTrash }) => {
   // Search Modal State Store
   const setShowSearchModal = useSearchModalStore((state) => state.setShowSearchModal);
 
@@ -70,8 +70,9 @@ export const Slot = ({ index }) => {
       ) : (
         <div className="mb-10">+</div>
       )}
-      {index >= 10 && (
+      {index >= 10 && showTrash && (
         <button
+
           className="absolute top-3 right-3 text-red-500 p-1 rounded-lg bg-stone-500 bg-opacity-0 hover:bg-opacity-50 duration-150"
           onClick={(e) => {
             e.stopPropagation();

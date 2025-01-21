@@ -129,17 +129,20 @@ export const Collage = () => {
 
   const dockRef = useRef(null);
   const promo = useRef(null);
+  const [showTrash, setShowTrash] = useState(true);
 
   const captureAndShare = async (action) => {
     const element = document.getElementById('collage-screenshot');
     if (element) {
       dockRef.current.style.opacity = 0;
       promo.current.style.opacity = 100;
+      setShowTrash(false)
       // Add a slight delay to ensure all elements are rendered
       await new Promise(resolve => setTimeout(resolve, 500)).then(() => {
         setTimeout(() => {
           dockRef.current.style.opacity = 30;
           promo.current.style.opacity = 0;
+          setShowTrash(true);
         }, 500);
       });
       const canvas = await html2canvas(element, { useCORS: true, scale: 2 });
@@ -176,7 +179,7 @@ export const Collage = () => {
         {currentMediaList.items.map((mediaItem, index) => (
           <div key={index} className="relative flex flex-col justify-center items-center">
             <div className="relative">
-              <Slot index={index} className="relative" />
+              <Slot index={index} className="relative" showTrash={showTrash}/>
               {showRanking && (
                 <div className="absolute text-2xl text-[#444C48] -top-8 -left-8 w-[50px] h-[50px] bg-[#232f16] bg-opacity-100 font-heading text-center rounded-lg flex justify-center items-end z-10">
                   <span className="text-center mb-1">

@@ -19,11 +19,10 @@ export const HelpModal = () => {
       )}
       <div
         ref={modalRef}
-        className={`fixed top-40 w-[840px] h-[614px] bg-[#B1FA63] flex-col rounded-[30px] border-8 border-lime-900 justify-center z-50 transition-opacity duration-300 ${
-          showHelp
+        className={`fixed top-40 w-[840px] h-[614px] bg-[#B1FA63] flex-col rounded-[30px] border-8 border-lime-900 justify-center z-50 transition-opacity duration-300 ${showHelp
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
-        } `}
+          } `}
       >
         {page == 1 ? (
           <span className="font-heading text-4xl mt-3 flex justify-center items-center p-7">
@@ -36,9 +35,7 @@ export const HelpModal = () => {
         )}
         {page == 1 ? (
           <div className="flex justify-center gap-5 relative">
-            <div className="w-[400px] h-[400px] bg-gray-400 rounded-[30px] flex justify-center items-center font-heading text-white">
-              insert gif here
-            </div>
+            <img src="/help-image.png" alt="help image" className="object-fit w-[400px] h-[400px] rounded-xl" />
             <div className="w-[315px] h-[400px]">
               <span className="font-heading text-[20px]">
                 Medium Crawler is a creative tool that allows you to curate and

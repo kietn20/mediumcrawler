@@ -63,6 +63,9 @@ export const Slot = ({ index }) => {
           src={currentMediaList.items[index].imageUrl}
           alt="mediaItem"
           className="w-full h-full object-cover z-20"
+          onError={(e) => {
+            e.target.src = '/imagebroken.png';
+          }}
         />
       ) : (
         <div className="mb-10">+</div>

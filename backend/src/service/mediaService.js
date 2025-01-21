@@ -116,13 +116,15 @@ class MediaService {
       const response = await this.anilistApi.post('', {
         query: `
           query ($search: String) {
-            Media(search: $search, type: MANGA) {
-              id
-              title {
-                romaji
-              }
-              coverImage {
-                large
+            Page {
+              media(search: $search, type: MANGA) {
+                id
+                title {
+                  romaji
+                }
+                coverImage {
+                  large
+                }
               }
             }
           }
@@ -130,7 +132,8 @@ class MediaService {
         variables: { search: query }
       });
 
-      return this.formatAnilistResults(response.data.data.Media);
+      const results = response.data.data.Page.media;
+      return this.formatAnilistResults(results);
     } catch (error) {
       console.error('Anilist API Error:', error.message);
       throw new Error('Failed to search media');

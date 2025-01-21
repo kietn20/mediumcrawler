@@ -85,7 +85,7 @@ export const useMediaStore = create((set) => ({
     }),
   addMediaItem: () =>
     set((state) => {
-      if (state.currentMediaList.items.length >= 25) {
+      if (state.currentMediaList.items.length >= 50) {
         toast.error("Media list is full");
         return state;
       }

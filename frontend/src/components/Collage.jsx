@@ -155,7 +155,9 @@ export const Collage = () => {
 
   return (
     <div id="collage-screenshot" className="relative flex flex-col items-center justify-start w-[70%] min-h-screen bg-[#0A0B06] overflow-visible pt-24">
-      <Navbar />
+      <div className="absolute top-0 opacity-70">
+        <Navbar />
+      </div>
       <div className="absolute font-heading z-50 text-lg">
         <Toaster />
       </div>
@@ -181,7 +183,7 @@ export const Collage = () => {
         {currentMediaList.items.map((mediaItem, index) => (
           <div key={index} className="relative flex flex-col justify-center items-center">
             <div className="relative">
-              <Slot index={index} className="relative" showTrash={showTrash}/>
+              <Slot index={index} className="relative" showTrash={showTrash} />
               {showRanking && (
                 <div className="absolute text-2xl text-[#444C48] -top-8 -left-8 w-[50px] h-[50px] bg-[#232f16] bg-opacity-100 font-heading text-center rounded-lg flex justify-center items-end z-10">
                   <span className="text-center mb-1">

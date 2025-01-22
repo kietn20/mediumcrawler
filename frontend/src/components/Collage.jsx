@@ -20,6 +20,7 @@ import { ShareModal } from "./ShareModal";
 import { useShareModalStore } from "../store/shareModalStore";
 import { ManageListsModal } from "./ManageListsModal";
 import html2canvas from 'html2canvas';
+import { Navbar } from "./Navbar";
 
 export const Collage = () => {
   const mediaLists = useMediaStore((state) => state.mediaLists);
@@ -154,6 +155,7 @@ export const Collage = () => {
 
   return (
     <div id="collage-screenshot" className="relative flex flex-col items-center justify-start w-[70%] min-h-screen bg-[#0A0B06] overflow-visible pt-24">
+      <Navbar />
       <div className="absolute font-heading z-50 text-lg">
         <Toaster />
       </div>
